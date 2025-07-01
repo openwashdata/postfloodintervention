@@ -1,5 +1,5 @@
 Package: postfloodintervention
-Title: What the Package Does (One Line, Title Case)
+Title: USAID Flood Response – Post Intervention Survey (Mulanje, 2019–2020)
 Version: 0.0.0.9000
 Authors@R: c(
     person("Emmanuel", "Mhango", , "emmanuellmhango@gmail.com", role = c("aut", "cre"),
@@ -19,7 +19,7 @@ Authors@R: c(
     person("Mayamiko", "Jumbe", role = "ctb"),
     person("Given", "Nyasulu", role = "ctb")
   )
-Description: What the package does (one paragraph).
+Description: The package provides access to  post-intervention monitoring data for rural water points in the Mulanje district of Malawi, collected as part of the USAID Flood Response program during 2019 and 2020.
 License: CC BY 4.0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
