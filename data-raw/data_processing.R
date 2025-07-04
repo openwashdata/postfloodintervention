@@ -65,6 +65,23 @@ data_in[] <- lapply(data_in, function(x) {
 # Re-check the data for non-UTF-8 characters after the conversion
 check_utf8(data_in)
 
+# Fix specific data quality issues ---------------------------------------------
+
+# Fix encoding issue in electrical_conductivity_units
+data_in <- data_in %>%
+  mutate(electrical_conductivity_units = gsub("\\?S / cm", "μS / cm", electrical_conductivity_units))
+
+# Check for potentially erroneous pH values
+low_ph_rows <- which(data_in$ph < 4)
+if(length(low_ph_rows) > 0) {
+  message("Warning: Unusually low pH values found in rows: ", paste(low_ph_rows, collapse = ", "))
+  message("pH values: ", paste(data_in$ph[low_ph_rows], collapse = ", "))
+}
+
+# Clean operational_feel_of_pump to handle multiple values consistently
+# Currently some entries have comma-separated multiple values
+# Keep as is for now but flag for documentation
+
 postfloodintervention <- data_in
 
 # Export Data ------------------------------------------------------------------
