@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+type: software
+title: postfloodintervention
+version: 0.1.0
+date-released: 2025-07-04
+abstract: What the package does (one paragraph).
+authors:
+  - family-names: Last
+    given-names: First
+    email: first.last@example.com
+license: To be determined
+repository-code: https://github.com/openwashdata/postfloodintervention
