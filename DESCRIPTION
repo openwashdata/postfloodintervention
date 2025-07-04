@@ -1,11 +1,14 @@
 Package: postfloodintervention
-Title: What the Package Does (One Line, Title Case)
+Title: USAID Flood Response Post Intervention Survey Data
 Version: 0.1.0
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("openwashdata", "Community", , "contact@openwashdata.org", role = c("aut", "cre"))
+Description: Post-intervention monitoring data for rural water points in the
+    Mulanje district of Malawi, collected as part of the USAID Flood Response
+    program during 2019-2020. The dataset includes comprehensive water point
+    assessments covering physical condition, operational performance, hydraulic
+    measurements, water quality parameters, and microbiological quality assessments.
+License: CC BY 4.0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2

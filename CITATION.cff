@@ -1,12 +1,19 @@
 cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
 type: software
-title: postfloodintervention
+title: "postfloodintervention: USAID Flood Response Post Intervention Survey Data"
 version: 0.1.0
 date-released: 2025-07-04
-abstract: What the package does (one paragraph).
+abstract: "This R package contains post-intervention monitoring data for rural water points in the Mulanje district of Malawi, collected as part of the USAID Flood Response program during 2019-2020. The dataset includes comprehensive water point assessments covering physical condition, operational performance, hydraulic measurements, water quality parameters (chemical contaminants and physical indicators), and microbiological quality assessments."
 authors:
-  - family-names: Last
-    given-names: First
-    email: first.last@example.com
-license: To be determined
-repository-code: https://github.com/openwashdata/postfloodintervention
+  - given-names: openwashdata
+    family-names: Community
+    email: contact@openwashdata.org
+license: CC-BY-4.0
+repository-code: "https://github.com/openwashdata/postfloodintervention"
+keywords:
+  - water-quality
+  - wash
+  - malawi
+  - flood-response
+  - monitoring-data
