@@ -15,9 +15,9 @@
 #'   \item{number_of_strokes_to_yield_water}{Number of pump strokes needed to produce water}
 #'   \item{sediment_presence}{Presence or absence of sediment in the water}
 #'   \item{electrical_conductivity_magnitude}{Measured magnitude of electrical conductivity in the water sample}
-#'   \item{electrical_conductivity_units}{Units of electrical conductivity measurement (e.g., uS/cm)}
+#'   \item{electrical_conductivity_units}{Units of electrical conductivity measurement (e.g., μS/cm)}
 #'   \item{arsenic_magnitude}{Concentration of arsenic detected in the water sample}
-#'   \item{arsenic_units}{Units used to measure arsenic concentration (e.g., ug/L)}
+#'   \item{arsenic_units}{Units used to measure arsenic concentration (e.g., μg/L)}
 #'   \item{ammonia_mg_per_l}{Ammonia concentration in mg per liter}
 #'   \item{fluoride_ppm}{Fluoride concentration in parts per million}
 #'   \item{nitrate_mg_per_l}{Nitrate concentration in mg per liter}
