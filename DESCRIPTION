@@ -1,11 +1,34 @@
 Package: postfloodintervention
-Title: What the Package Does (One Line, Title Case)
+Title: USAID Flood Response – Post Intervention Survey (Mulanje, 2019–2020)
 Version: 0.0.0.9000
-Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+Authors@R: c(
+    person("Emmanuel", "Mhango", , "emmanuellmhango@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0003-3197-6244")),
+    person("Evance", role = "ctb"),
+    person("Julius", "Kutaumbe", role = "ctb"),
+    person("Eramore", role = "ctb"),
+    person("Patrick", "Katholowamo", role = "ctb"),
+    person("Rashid", "Kumbu", role = "ctb"),
+    person("Mkangara", role = "ctb"),
+    person("Benja", "Moree", role = "ctb"),
+    person("Rober", "Gerald", role = "ctb"),
+    person("Olipa", role = "ctb"),
+    person("Laurent CT", "Levesque", role = "ctb"),
+    person("Shaun", "MacLeod", role = "ctb"),
+    person("Davie", "Selenje", role = "ctb"),
+    person("Mayamiko", "Jumbe", role = "ctb"),
+    person("Given", "Nyasulu", role = "ctb")
+  )
+Description: The package provides access to  post-intervention monitoring data for rural water points in the Mulanje district of Malawi, collected as part of the USAID Flood Response program during 2019 and 2020.
+License: CC BY 4.0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
+Depends: 
+    R (>= 3.5)
+LazyData: true
+Language: en-GB
+Config/Needs/website: rmarkdown
+Date: 2025-07-01
+URL: https://github.com/openwashdata/postfloodintervention
+BugReports: https://github.com/openwashdata/postfloodintervention/issues
