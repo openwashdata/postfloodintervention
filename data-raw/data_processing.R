@@ -27,6 +27,11 @@ data_in <- readr::read_csv("data-raw/USAID Flood Response - Post Intervention Su
 data_in <- data_in %>%
   filter(!is.na(latitude))
 
+# Replace unusually low pH values (0.73 and 0.68) with NA
+# These values are outliers and likely measurement errors
+data_in <- data_in %>%
+  mutate(ph = ifelse(ph %in% c(0.68, 0.73), NA, ph))
+
 
 # Function to check for non-UTF-8 characters in character columns
 check_utf8 <- function(df) {
