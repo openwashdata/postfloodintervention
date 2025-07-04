@@ -36,6 +36,11 @@ if (rows_removed > 0) {
   message("Removed ", rows_removed, " rows with missing coordinates")
 }
 
+# Replace unusually low pH values (0.73 and 0.68) with NA
+# These values are outliers and likely measurement errors
+data_in <- data_in %>%
+  mutate(ph = ifelse(ph %in% c(0.68, 0.73), NA, ph))
+
 
 # Character encoding cleanup --------------------------------------------------
 # The raw data may contain special characters (e.g., μ for micro) that need 
