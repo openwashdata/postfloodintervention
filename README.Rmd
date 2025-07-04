@@ -1,0 +1,225 @@
+---
+output: github_document
+always_allow_html: true
+editor_options: 
+  markdown: 
+    wrap: 72
+  chunk_output_type: console
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%",
+  message = FALSE,
+  warning = FALSE,
+  fig.retina = 2,
+  fig.align = 'center'
+)
+```
+
+# USAID Flood Response – Post Intervention Survey (Mulanje, 2019–2020)
+
+<!-- badges: start -->
+
+[![License: CC BY
+4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
+<!-- badges: end -->
+
+This dataset contains detailed post-intervention monitoring data for
+rural water points in the Mulanje district of Malawi, collected as part
+of the USAID Flood Response program during 2019 and 2020. Using the
+mWater mobile data collection platform, enumerators conducted on-site
+assessments of water point conditions following flood recovery efforts.
+
+The data captures a comprehensive range of water point characteristics,
+including physical condition through photographs, operational
+performance of pumps, and hydraulic measurements such as time and effort
+required to pump a standard volume of water. Additionally, water quality
+parameters were rigorously tested—covering chemical contaminants like
+arsenic, ammonia, fluoride, nitrate, free chlorine, and total dissolved
+solids, as well as physical indicators such as pH, temperature, and
+turbidity.
+
+Microbiological quality was assessed via E. coli concentrations,
+including counts per 100 milliliters, confidence intervals, and risk
+classifications, supported by photographic documentation of test
+results. These indicators provide critical insight into the safety and
+usability of water sources after flood-related disruptions.
+
+### Use Cases
+
+This dataset serves multiple practical purposes for water management and
+public health:
+
+-    **Evaluating the effectiveness** of flood recovery interventions on
+    water infrastructure.
+
+-    **Monitoring water quality trends** to identify ongoing or emerging
+    contamination risks.
+
+-    **Informing maintenance and rehabilitation priorities** based on
+    pump performance and structural assessments.
+
+-    **Supporting public health risk assessments** through microbial
+    contamination data.
+
+-    **Providing evidence for community-level decision making** and
+    donor reporting.
+
+-    **Guiding future emergency preparedness and response planning** for
+    water systems in flood-prone areas.
+
+### Potential Users
+
+The dataset is highly valuable to a range of stakeholders including:
+
+1.   Government agencies responsible for water supply and sanitation,
+    particularly at the district and national levels.
+
+2.   International donor organizations and development partners managing
+    WASH and disaster recovery programs.
+
+3.   Field engineers and technical teams engaged in infrastructure
+    repair and monitoring.
+
+4.   Public health officials tracking waterborne disease risks.
+
+5.   Researchers studying environmental health, water security, and
+    climate resilience.
+
+6.   NGOs and civil society organizations supporting community water
+    management and advocacy.
+
+## Installation
+
+You can install the development version of postfloodintervention from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("openwashdata/postfloodintervention")
+```
+
+```{r}
+## Run the following code in console if you don't have the packages
+## install.packages(c("dplyr", "knitr", "readr", "stringr", "gt", "kableExtra"))
+library(dplyr)
+library(knitr)
+library(readr)
+library(stringr)
+library(gt)
+library(kableExtra)
+```
+
+Alternatively, you can download the individual datasets as a CSV or XLSX
+file from the table below.
+
+1.  Click Download CSV. A window opens that displays the CSV in your
+    browser.
+2.  Right-click anywhere inside the window and select "Save Page As...".
+3.  Save the file in a folder of your choice.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+extdata_path <- "https://github.com/openwashdata/postfloodintervention/raw/main/inst/extdata/"
+
+read_csv("data-raw/dictionary.csv") |> 
+  distinct(file_name) |> 
+  dplyr::mutate(file_name = str_remove(file_name, ".rda")) |> 
+  dplyr::rename(dataset = file_name) |> 
+  mutate(
+    CSV = paste0("[Download CSV](", extdata_path, dataset, ".csv)"),
+    XLSX = paste0("[Download XLSX](", extdata_path, dataset, ".xlsx)")
+  ) |> 
+  knitr::kable()
+
+```
+
+## Data
+
+The package provides access to  post-intervention monitoring data for rural water points in the Mulanje district of Malawi, collected as part of the USAID Flood Response program during 2019 and 2020.
+
+```{r}
+library(postfloodintervention)
+```
+
+### postfloodintervention
+
+The dataset `postfloodintervention` contains 
+`r nrow(postfloodintervention)` observations and
+`r ncol(postfloodintervention)` variables
+
+```{r}
+postfloodintervention |> 
+  head(3) |> 
+  gt::gt() |>
+  gt::as_raw_html()
+```
+
+For an overview of the variable names, see the following table.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+readr::read_csv("data-raw/dictionary.csv") |>
+  dplyr::filter(file_name == "postfloodintervention.rda") |>
+  dplyr::select(variable_name:description) |> 
+  knitr::kable() |> 
+  kableExtra::kable_styling("striped") |> 
+  kableExtra::scroll_box(height = "200px")
+```
+
+## Example
+
+```{r}
+## Run the following code in console if you don't have the packages
+## install.packages(c("postfloodintervention", "tidyverse"))
+library(postfloodintervention)
+
+# Water Quality Parameters
+# Purpose: Multi-panel boxplots for chemical indicators (arsenic, fluoride, nitrate, ammonia, free chlorine, pH) to detect outliers or contamination patterns.
+
+# Load libraries
+library(tidyverse)
+
+# Select relevant chemical columns and pivot longer for plotting
+chemicals_long <- postfloodintervention %>%
+  select(arsenic_magnitude, fluoride_ppm, nitrate_mg_per_l, ammonia_mg_per_l, free_chlorine_mg_per_l, ph) %>%
+  pivot_longer(
+    cols = everything(),
+    names_to = "chemical",
+    values_to = "value"
+  ) %>%
+  filter(!is.na(value))  # Remove missing values
+
+# Plot multi-panel boxplots
+ggplot(chemicals_long, aes(x = chemical, y = value)) +
+  geom_boxplot(fill = "#4a90e2", outlier.color = "red") +
+  facet_wrap(~ chemical, scales = "free") +   # Free y-scale per chemical
+  labs(
+    title = "Water Quality Parameters: Chemical Indicators",
+    x = NULL,
+    y = "Concentration"
+  ) +
+  theme_minimal() +
+  theme(axis.text.x = element_blank(),   # Hide x labels since facets show names
+        axis.ticks.x = element_blank())
+
+```
+
+## License
+
+Data are available as
+[CC-BY](https://github.com/openwashdata/%7B%7B%7Bpackagename%7D%7D%7D/blob/main/LICENSE.md).
+
+## Citation
+
+Please cite this package using:
+
+```{r}
+citation("postfloodintervention")
+```
