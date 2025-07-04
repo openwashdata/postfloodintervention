@@ -176,6 +176,8 @@ readr::read_csv("data-raw/dictionary.csv") |>
 ## Example
 
 ```{r}
+## Run the following code in console if you don't have the packages
+## install.packages(c("postfloodintervention", "tidyverse"))
 library(postfloodintervention)
 
 # Water Quality Parameters
