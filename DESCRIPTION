@@ -1,8 +1,23 @@
 Package: postfloodintervention
 Title: USAID Flood Response Post Intervention Survey Data
 Version: 0.1.0
-Authors@R: 
-    person("openwashdata", "Community", , "contact@openwashdata.org", role = c("aut", "cre"))
+Authors@R: c(
+    person("Emmanuel", "Mhango", , "emmanuellmhango@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0003-3197-6244")),
+    person("Evance", role = "ctb"),
+    person("Julius", "Kutaumbe", role = "ctb"),
+    person("Eramore", role = "ctb"),
+    person("Patrick", "Katholowamo", role = "ctb"),
+    person("Rashid", "Kumbu", role = "ctb"),
+    person("Mkangara", role = "ctb"),
+    person("Benja", "Moree", role = "ctb"),
+    person("Rober", "Gerald", role = "ctb"),
+    person("Olipa", role = "ctb"),
+    person("Laurent CT", "Levesque", role = "ctb"),
+    person("Shaun", "MacLeod", role = "ctb"),
+    person("Davie", "Selenje", role = "ctb"),
+    person("Mayamiko", "Jumbe", role = "ctb"),
+    person("Given", "Nyasulu", role = "ctb"))
 Description: Post-intervention monitoring data for rural water points in the
     Mulanje district of Malawi, collected as part of the USAID Flood Response
     program during 2019-2020. The dataset includes comprehensive water point
