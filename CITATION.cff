@@ -1,20 +1,27 @@
+# --------------------------------------------
+# CITATION file created with {cffr} R package
+# See also: https://docs.ropensci.org/cffr/
+# --------------------------------------------
+ 
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
+message: 'To cite package "postfloodintervention" in publications use:'
 type: software
-title: "postfloodintervention: USAID Flood Response Post Intervention Survey Data"
-version: 0.1.0
-date-released: 2025-07-04
-abstract: "This R package contains post-intervention monitoring data for rural water points in the Mulanje district of Malawi, collected as part of the USAID Flood Response program during 2019-2020. The dataset includes comprehensive water point assessments covering physical condition, operational performance, hydraulic measurements, water quality parameters (chemical contaminants and physical indicators), and microbiological quality assessments."
-authors:
-  - given-names: Emmanuel
-    family-names: Mhango
-    email: emmanuellmhango@gmail.com
-    orcid: "https://orcid.org/0000-0003-3197-6244"
 license: CC-BY-4.0
-repository-code: "https://github.com/openwashdata/postfloodintervention"
-keywords:
-  - water-quality
-  - wash
-  - malawi
-  - flood-response
-  - monitoring-data
+title: 'postfloodintervention: USAID Flood Response Post Intervention Survey Data'
+version: 0.1.0
+abstract: Post-intervention monitoring data for rural water points in the Mulanje
+  district of Malawi, collected as part of the USAID Flood Response program during
+  2019-2020. The dataset includes comprehensive water point assessments covering physical
+  condition, operational performance, hydraulic measurements, water quality parameters,
+  and microbiological quality assessments.
+authors:
+- family-names: Mhango
+  given-names: Emmanuel
+  email: emmanuellmhango@gmail.com
+  orcid: https://orcid.org/0000-0003-3197-6244
+contact:
+- family-names: Mhango
+  given-names: Emmanuel
+  email: emmanuellmhango@gmail.com
+  orcid: https://orcid.org/0000-0003-3197-6244
+
