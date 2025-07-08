@@ -1,4 +1,4 @@
-# postfloodintervention 0.1.0
+# postfloodintervention 0.1.0 (2025-07-08)
 
 * Initial release to GitHub
 * Added core data processing pipeline (#3)
