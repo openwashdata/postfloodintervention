@@ -116,6 +116,7 @@ library(readr)
 library(stringr)
 library(gt)
 library(kableExtra)
+library(postfloodintervention)
 ```
 
 Alternatively, you can download the individual datasets as a CSV or XLSX
@@ -147,7 +148,7 @@ read_csv("data-raw/dictionary.csv") |>
 The package provides access to  post-intervention monitoring data for rural water points in the Mulanje district of Malawi, collected as part of the USAID Flood Response program during 2019 and 2020.
 
 ```{r}
-library(postfloodintervention)
+library(postfloodintervention::postfloodintervention)
 ```
 
 ### postfloodintervention

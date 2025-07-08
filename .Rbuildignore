@@ -1,3 +1,9 @@
 ^postfloodintervention\.Rproj$
 ^\.Rproj\.user$
 ^CITATION\.cff$
+^CLAUDE\.md$
+^README\.Rmd$
+^_pkgdown\.yml$
+^data-raw$
+^docs$
+^\.claude$

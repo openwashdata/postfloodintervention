@@ -3,7 +3,7 @@
 #' This dataset represents the USAID Flood Response Post Intervention Survey conducted in Mulanje during 2019-2020 using the mWater platform. 
 #' It contains comprehensive water quality assessments and operational data from various water points affected by flooding.
 #' 
-#' @format A tibble with 308 rows and 30 variables
+#' @format A tibble with 308 rows and 30 variables:
 #' \describe{
 #'   \item{submitted_on}{Date when the survey was submitted}
 #'   \item{water_point_name}{Name of the water point}
@@ -36,4 +36,5 @@
 #'   \item{ecoli_health_risk_category}{Health risk classification based on E. coli levels (e.g., low, medium, high)}
 #'   \item{ecoli_image}{File name or URL of image showing E. coli test result or sample compartment color change}
 #' }
+#' @source <https://www.mwater.co>
 "postfloodintervention"
