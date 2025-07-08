@@ -9,7 +9,7 @@ type: software
 license: CC-BY-4.0
 title: 'postfloodintervention: USAID Flood Response Post Intervention Survey Data'
 version: 0.1.0
-date-released: 2025-07-08
+doi: 10.5281/zenodo.15837461
 abstract: Post-intervention monitoring data for rural water points in the Mulanje
   district of Malawi, collected as part of the USAID Flood Response program during
   2019-2020. The dataset includes comprehensive water point assessments covering physical
@@ -20,21 +20,6 @@ authors:
   given-names: Emmanuel
   email: emmanuellmhango@gmail.com
   orcid: https://orcid.org/0000-0003-3197-6244
-preferred-citation:
-  type: generic
-  title: 'postfloodintervention: USAID Flood Response Post Intervention Survey Data'
-  authors:
-  - family-names: Mhango
-    given-names: Emmanuel
-    email: emmanuellmhango@gmail.com
-    orcid: https://orcid.org/0000-0003-3197-6244
-  abstract: Post-intervention monitoring data for rural water points in the Mulanje
-    district of Malawi, collected as part of the USAID Flood Response program during
-    2019-2020. The dataset includes comprehensive water point assessments covering
-    physical condition, operational performance, hydraulic measurements, water quality
-    parameters, and microbiological quality assessments.
-  version: 0.1.0
-  date-released: 2025-07-08
 contact:
 - family-names: Mhango
   given-names: Emmanuel

@@ -6,6 +6,5 @@ bibentry(bibtype = "Misc",
                          family = "Mhango",
                          email = "emmanuellmhango@gmail.com",
                          comment = c(ORCID = "0000-0003-3197-6244")),
-         doi = "10.5281/zenodo.15837461",
          abstract = "Post-intervention monitoring data for rural water points in the Mulanje district of Malawi, collected as part of the USAID Flood Response program during 2019-2020. The dataset includes comprehensive water point assessments covering physical condition, operational performance, hydraulic measurements, water quality parameters, and microbiological quality assessments.",
          version = "0.1.0")
