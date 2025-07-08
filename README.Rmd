@@ -117,6 +117,7 @@ library(stringr)
 library(gt)
 library(kableExtra)
 library(postfloodintervention)
+data(postfloodintervention)
 ```
 
 Alternatively, you can download the individual datasets as a CSV or XLSX
@@ -212,7 +213,7 @@ ggplot(chemicals_long, aes(x = chemical, y = value)) +
 ## License
 
 Data are available as
-[CC-BY](https://github.com/openwashdata/%7B%7B%7Bpackagename%7D%7D%7D/blob/main/LICENSE.md).
+[CC-BY](https://github.com/openwashdata/postfloodintervention/blob/main/LICENSE.md).
 
 ## Citation
 
