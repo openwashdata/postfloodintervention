@@ -29,7 +29,8 @@ knitr::opts_chunk$set(
 [![License: CC BY
 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15837461.svg)](https://doi.org/10.5281/zenodo.15837461)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15837460.svg)](https://zenodo.org/doi/10.5281/zenodo.15837460)
+[![R-CMD-check](https://github.com/openwashdata/postfloodintervention/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/postfloodintervention/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 This dataset contains detailed post-intervention monitoring data for
@@ -213,7 +214,7 @@ ggplot(chemicals_long, aes(x = chemical, y = value)) +
 ## License
 
 Data are available as
-[CC-BY](https://github.com/openwashdata/postfloodintervention/blob/main/LICENSE.md).
+[CC-BY](https://creativecommons.org/licenses/by/4.0/).
 
 ## Citation
 
