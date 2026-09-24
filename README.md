@@ -8,7 +8,7 @@
 [![License: CC BY
 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15837461.svg)](https://doi.org/10.5281/zenodo.15837461)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15837460.svg)](https://zenodo.org/doi/10.5281/zenodo.15837460)
 <!-- badges: end -->
 
 This dataset contains detailed post-intervention monitoring data for
@@ -129,7 +129,7 @@ postfloodintervention |>
   gt::as_raw_html()
 ```
 
-<div id="vxskhmbnlo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="mfiijmyofv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -257,15 +257,14 @@ postfloodintervention |>
 <td headers="ecoli_health_risk_category" class="gt_row gt_left" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">safe</td>
 <td headers="ecoli_image" class="gt_row gt_left" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">https://api.mwater.co/v3/images/966e6d52075f4273b45288d5e2eea8e4</td></tr>
   </tbody>
-  &#10;  
-</table>
+  &#10;</table>
 </div>
 
 For an overview of the variable names, see the following table.
 
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:200px; ">
 
-<table class="table table-striped" style="color: black; margin-left: auto; margin-right: auto;">
+<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
 
 <thead>
 
@@ -909,12 +908,12 @@ ggplot(chemicals_long, aes(x = chemical, y = value)) +
         axis.ticks.x = element_blank())
 ```
 
-<img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-6-1.png" alt="" width="100%" style="display: block; margin: auto;" />
 
 ## License
 
 Data are available as
-[CC-BY](https://github.com/openwashdata/postfloodintervention/blob/main/LICENSE.md).
+[CC-BY](https://creativecommons.org/licenses/by/4.0/).
 
 ## Citation
 
@@ -924,17 +923,21 @@ Please cite this package using:
 citation("postfloodintervention")
 #> To cite package 'postfloodintervention' in publications use:
 #> 
-#>   Mhango E (????). "postfloodintervention: USAID Flood Response Post
-#>   Intervention Survey Data." doi:10.5281/zenodo.15837461
-#>   <https://doi.org/10.5281/zenodo.15837461>.
+#>   Mhango E (2025). "postfloodintervention: USAID Flood Response Post
+#>   Intervention Survey Data." doi:10.5281/zenodo.15837460
+#>   <https://doi.org/10.5281/zenodo.15837460>.
+#>   <https://github.com/openwashdata/postfloodintervention>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
-#>   @Misc{mhango,
+#>   @Misc{mhango:2025,
 #>     title = {postfloodintervention: USAID Flood Response Post Intervention Survey Data},
 #>     author = {Emmanuel Mhango},
-#>     doi = {10.5281/zenodo.15837461},
+#>     year = {2025},
+#>     doi = {10.5281/zenodo.15837460},
+#>     url = {https://github.com/openwashdata/postfloodintervention},
 #>     abstract = {Post-intervention monitoring data for rural water points in the Mulanje district of Malawi, collected as part of the USAID Flood Response program during 2019-2020. The dataset includes comprehensive water point assessments covering physical condition, operational performance, hydraulic measurements, water quality parameters, and microbiological quality assessments.},
-#>     version = {0.1.0},
+#>     keywords = {open data,washdata,water points,water quality,boreholes,rehabilitation,flood response,E. coli,Malawi},
+#>     version = {0.1.2},
 #>   }
 ```

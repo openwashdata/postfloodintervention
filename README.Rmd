@@ -213,7 +213,7 @@ ggplot(chemicals_long, aes(x = chemical, y = value)) +
 ## License
 
 Data are available as
-[CC-BY](https://github.com/openwashdata/postfloodintervention/blob/main/LICENSE.md).
+[CC-BY](https://creativecommons.org/licenses/by/4.0/).
 
 ## Citation
 
