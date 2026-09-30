@@ -20,7 +20,14 @@ library(openxlsx)  # For writing Excel files
 # Load Data --------------------------------------------------------------------
 # Load raw survey data from CSV file
 # Note: This file contains water quality measurements from 308+ water points
-data_in <- readr::read_csv(here::here("data-raw", "USAID Flood Response - Post Intervention Survey.csv"))
+#data_in <- readr::read_csv(here::here("data-raw", "USAID Flood Response - Post Intervention Survey.csv"))
+data_in <- readr::read_csv(
+  here::here("data-raw", "USAID Flood Response - Post Intervention Survey.csv"),
+  col_types = readr::cols(
+    date_of_sample = col_date(format = "%d/%m/%Y")
+  )
+) %>% mutate(date_of_sample = format(date_of_sample, "%d/%m/%Y"))
+
 
 # Initial data inspection -----------------------------------------------------
 message("Raw data loaded: ", nrow(data_in), " rows, ", ncol(data_in), " columns")
@@ -146,12 +153,6 @@ if (length(negative_ecoli) > 0) {
 
 # 5. Date format standardization
 message("\nStandardizing date formats...")
-
-# Convert date columns to consistent format
-data_in <- data_in %>%
-  mutate(
-    date_of_sample = as.character(date_of_sample)
-  )
 
 # Note about operational_feel_of_pump
 # This field contains comma-separated multiple values in some entries
