@@ -1,0 +1,3 @@
+fileName,name,contentUrl,encodingFormat
+postfloodintervention.csv,postfloodintervention,https://raw.githubusercontent.com/openwashdata/postfloodintervention/main/inst/extdata/postfloodintervention.csv,csv
+postfloodintervention.xlsx,postfloodintervention,https://raw.githubusercontent.com/openwashdata/postfloodintervention/main/inst/extdata/postfloodintervention.xlsx,ooxml
