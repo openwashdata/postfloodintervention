@@ -113,7 +113,7 @@ of the USAID Flood Response program during 2019 and 2020.
 
 ### postfloodintervention
 
-The dataset `postfloodintervention` contains 308 observations and 30
+The dataset `postfloodintervention` contains 257 observations and 28
 variables
 
 ``` r
@@ -124,21 +124,20 @@ postfloodintervention |>
   gt::as_raw_html()
 ```
 
-| submitted_on | water_point_name | latitude | longitude | photo_condition_water_point | operational_feel_of_pump | time_to_pump_20_litres | number_of_strokes_to_yield_water | sediment_presence | electrical_conductivity_magnitude | electrical_conductivity_units | arsenic_magnitude | arsenic_units | ammonia_mg_per_l | fluoride_ppm | nitrate_mg_per_l | total_dissolved_solids_ppt | free_chlorine_mg_per_l | ph | temperature_magnitude | temperature_units | turbidity_tube_magnitude | turbidity_tube_units | comments | type_of_sample | date_of_sample | ecoli_mpn_per_100ml | ecoli_upper_95ci_per_100ml | ecoli_health_risk_category | ecoli_image |
-|---:|:---|---:|---:|:---|:---|---:|---:|:---|---:|:---|---:|:---|---:|---:|---:|---:|---:|---:|---:|:---|---:|:---|:---|:---|---:|---:|---:|:---|:---|
-| 08/07/2019 | Beseni borehole | -15.62573 | 35.51046 | <https://api.mwater.co/v3/images/8b33e91a7390478ea15a6177ebb6f3c6>; <https://api.mwater.co/v3/images/f21ced7742364d85b5241f2d29d765e8> | Normal/satisfactory | 70.040 | 1 | Absent | 5740.0 | μS / cm | 5 | ppb | 0.20 | 1.6 | 0.60 | 2.79 | 0.0 | 7.06 | 25.2 | C | 5 | NTU | NA | Point of collection | 7/5/2019 | 0 | 2.87 | safe | <https://api.mwater.co/v3/images/5d6f60f749f6499098680d27094e3d59> |
-| 05/12/2019 | Demula borehole 3 | -15.96436 | 35.47770 | <https://api.mwater.co/v3/images/1b9e5eb6d4d14feca18ca7ac63d7d1d1> | Normal/satisfactory | 44.811 | 2 | Absent | 136.1 | μS / cm | 0 | ppb | 0.64 | 0.3 | 0.58 | 0.08 | 0.3 | 6.00 | 30.0 | C | 5 | NTU | NA | Point of collection | 12/4/2019 | 0 | 2.87 | safe | <https://api.mwater.co/v3/images/b455ed0a2f864d30ab94c1ec833cfda2> |
-| 23/02/2020 | Demula borehole 3 | -15.96436 | 35.47770 | <https://api.mwater.co/v3/images/14fd52d3d6a4466b878bba3360fd45d6> | Normal/satisfactory | 43.208 | 2 | Absent | 140.2 | μS / cm | 0 | ppb | 0.61 | 0.2 | 0.50 | 0.09 | 0.9 | 6.80 | 30.4 | C | 5 | NTU | NA | Point of collection | 2/22/2020 | 0 | 2.87 | safe | <https://api.mwater.co/v3/images/966e6d52075f4273b45288d5e2eea8e4> |
+| date_of_sample | waterpoint_id | latitude | longitude | operational_feel_of_pump | time_to_pump_20_litres | number_of_strokes_to_yield_water | sediment_presence | electrical_conductivity_magnitude | electrical_conductivity_units | arsenic_magnitude | arsenic_units | ammonia_mg_per_l | fluoride_ppm | nitrate_mg_per_l | total_dissolved_solids_ppt | free_chlorine_mg_per_l | ph | temperature_magnitude | temperature_units | turbidity_tube_magnitude | turbidity_tube_units | comments | type_of_sample | ecoli_mpn_per_100ml | ecoli_upper_95ci_per_100ml | ecoli_health_risk_category | ecoli_image |
+|---:|---:|---:|---:|:---|---:|---:|:---|---:|:---|---:|:---|---:|---:|---:|---:|---:|---:|---:|:---|---:|:---|:---|:---|---:|---:|:---|:---|
+| 17/06/2019 | 79477116 | -16.00085 | 35.43693 | Normal/satisfactory | 39.941 | 1 | Absent | 176.4 | μS / cm | 5.0 | ppb | 0.15 | 0.2 | 0.5 | 0.80 | 0 | 6.40 | 24.6 | C | 5 | NTU | NA | Point of collection | 0 | 2.87 | safe | <https://api.mwater.co/v3/images/7fbb039ed2324a6da2a27168b59bcaa0> |
+| 17/06/2019 | 12060128 | -15.99983 | 35.44297 | Normal/satisfactory | 37.851 | 1 | Absent | 215.7 | μS / cm | 0.5 | ppb | 2.40 | 0.2 | 0.5 | 0.10 | 0 | 6.20 | 25.0 | C | 5 | NTU | NA | Point of collection | 0 | 2.87 | safe | <https://api.mwater.co/v3/images/f9d763bd60374df48e921d0a77f595a9> |
+| 17/06/2019 | 12079117 | -15.99827 | 35.43772 | Normal/satisfactory | 42.281 | 1 | Absent | 4630.0 | μS / cm | 10.0 | ppb | 0.15 | 2.0 | 0.5 | 0.22 | 0 | 6.18 | 25.1 | C | 5 | NTU | The borehole is now ina very good condition and the borehole committee members are very happy with the performance. | Point of collection | 0 | 2.87 | safe | <https://api.mwater.co/v3/images/fdaacc5054aa4bd6a90701d54e112196> |
 
 For an overview of the variable names, see the following table.
 
 | variable_name | variable_type | description |
 |:---|:---|:---|
-| submitted_on | character | Date when the survey was submitted |
-| water_point_name | character | Name of the water point |
-| latitude | numeric | Geographic latitude coordinate of the water point |
-| longitude | numeric | Geographic longitude coordinate of the water point |
-| photo_condition_water_point | character | File names or URLs of photos illustrating the current condition of the water point |
+| date_of_sample | character | Date when the water sample was collected |
+| waterpoint_id | numeric | Geographic latitude coordinate of the water point |
+| latitude | numeric | Geographic longitude coordinate of the water point |
+| longitude | numeric | File names or URLs of photos illustrating the current condition of the water point |
 | operational_feel_of_pump | character | Qualitative assessment of how the pump feels during operation |
 | time_to_pump_20_litres | numeric | Time taken (in seconds or minutes) to pump 20 liters of water |
 | number_of_strokes_to_yield_water | numeric | Number of pump strokes needed to produce water |
@@ -159,7 +158,6 @@ For an overview of the variable names, see the following table.
 | turbidity_tube_units | character | Units for turbidity measurement (e.g., NTU) |
 | comments | character | Additional notes or observations related to the water point or sample |
 | type_of_sample | character | Type or source of the water sample (e.g., well, tap, river) |
-| date_of_sample | character | Date when the water sample was collected |
 | ecoli_mpn_per_100ml | numeric | Most probable number (MPN) of E. coli bacteria per 100 milliliters |
 | ecoli_upper_95ci_per_100ml | numeric | Upper limit of the 95 percent confidence interval for E. coli MPN per 100 ml |
 | ecoli_health_risk_category | character | Health risk classification based on E. coli levels (e.g., low, medium, high) |
@@ -221,7 +219,7 @@ citation("postfloodintervention")
 #> 
 #>   Mhango E (2025). "postfloodintervention: USAID Flood Response Post
 #>   Intervention Survey Data." doi:10.5281/zenodo.15837460
-#>   <https://doi.org/10.5281/zenodo.15837460>.
+#>   <https://doi.org/10.5281/zenodo.15837460>,
 #>   <https://github.com/openwashdata/postfloodintervention>.
 #> 
 #> A BibTeX entry for LaTeX users is
