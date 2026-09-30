@@ -1,6 +1,6 @@
 # Description ------------------------------------------------------------------
 # R script to process USAID Flood Response Post Intervention Survey data
-# 
+#
 # This script transforms raw survey data from water points in Mulanje (2019-2020)
 # into a clean, analysis-ready dataset. The data includes water quality measurements
 # and operational assessments from various water points affected by flooding.
@@ -43,8 +43,8 @@ data_in <- data_in %>%
 
 
 # Character encoding cleanup --------------------------------------------------
-# The raw data may contain special characters (e.g., μ for micro) that need 
-# proper UTF-8 encoding. This is common when data is exported from various 
+# The raw data may contain special characters (e.g., μ for micro) that need
+# proper UTF-8 encoding. This is common when data is exported from various
 # survey platforms or entered on different systems.
 
 # Function to check for non-UTF-8 characters in character columns
@@ -56,16 +56,16 @@ check_utf8 <- function(df) {
       !identical(iconv(x, from = "UTF-8", to = "UTF-8"), x)
     }))
   })
-  
+
   bad_cols <- names(df)[invalid_cols]
-  
+
   if (length(bad_cols) > 0) {
     message("Non-UTF-8 characters detected in columns: ",
             paste(bad_cols, collapse = ", "))
   } else {
     message("All character data is properly UTF-8 encoded")
   }
-  
+
   return(invisible(bad_cols))
 }
 
@@ -84,7 +84,7 @@ if (length(problematic_cols) > 0) {
       x
     }
   })
-  
+
   # Verify conversion
   message("Checking character encoding after conversion...")
   check_utf8(data_in)
@@ -107,8 +107,8 @@ invalid_coords <- data_in %>%
 
 if (nrow(invalid_coords) > 0) {
   warning("Found ", nrow(invalid_coords), " rows with invalid coordinates")
-  message("Invalid coordinate rows: ", paste(which(data_in$latitude < -90 | data_in$latitude > 90 | 
-                                                    data_in$longitude < -180 | data_in$longitude > 180), 
+  message("Invalid coordinate rows: ", paste(which(data_in$latitude < -90 | data_in$latitude > 90 |
+                                                    data_in$longitude < -180 | data_in$longitude > 180),
                                               collapse = ", "))
 }
 
@@ -116,7 +116,7 @@ if (nrow(invalid_coords) > 0) {
 if (any(!is.na(data_in$ph))) {
   ph_range <- range(data_in$ph, na.rm = TRUE)
   message("pH range: ", round(ph_range[1], 2), " - ", round(ph_range[2], 2))
-  
+
   # Flag potentially erroneous pH values
   unusual_ph <- which(data_in$ph < 4 | data_in$ph > 10)
   if (length(unusual_ph) > 0) {
@@ -130,7 +130,7 @@ if (any(!is.na(data_in$ph))) {
 if (any(!is.na(data_in$temperature_magnitude))) {
   temp_range <- range(data_in$temperature_magnitude, na.rm = TRUE)
   message("Temperature range: ", round(temp_range[1], 1), " - ", round(temp_range[2], 1), " °C")
-  
+
   # Flag extreme temperatures
   extreme_temp <- which(data_in$temperature_magnitude < 0 | data_in$temperature_magnitude > 45)
   if (length(extreme_temp) > 0) {
@@ -150,7 +150,6 @@ message("\nStandardizing date formats...")
 # Convert date columns to consistent format
 data_in <- data_in %>%
   mutate(
-    submitted_on = as.character(submitted_on),  # Keep as character for consistency
     date_of_sample = as.character(date_of_sample)
   )
 
@@ -163,7 +162,7 @@ message("\nData summary after cleaning:")
 message("  Total rows: ", nrow(data_in))
 message("  Total columns: ", ncol(data_in))
 message("  Water points represented: ", n_distinct(data_in$water_point_name, na.rm = TRUE))
-message("  Date range: ", min(data_in$submitted_on, na.rm = TRUE), " to ", 
+message("  Date range: ", min(data_in$submitted_on, na.rm = TRUE), " to ",
         max(data_in$submitted_on, na.rm = TRUE))
 
 # Create final dataset
@@ -173,7 +172,7 @@ postfloodintervention <- data_in
 message("\nExporting processed data...")
 
 # Save as R data file
-save(postfloodintervention, file = here::here("data", "postfloodintervention.rda"), 
+save(postfloodintervention, file = here::here("data", "postfloodintervention.rda"),
      compress = "bzip2")
 message("  ✓ Saved .rda file")
 
