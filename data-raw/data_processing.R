@@ -18,10 +18,6 @@ library(maps)
 # Load the necessary data from a CSV file
 data_in <- readr::read_csv("data-raw/USAID Flood Response - Post Intervention Survey.csv")
 
-# (Optional) Read and clean the codebook if needed (commented out for now)
-# codebook <- readxl::read_excel("data-raw/codebook.xlsx") %>%
-#   clean_names()
-
 # Tidy data --------------------------------------------------------------------
 # Remove rows where the 'latitude' column contains NULL (NA) values
 data_in <- data_in %>%
