@@ -4,8 +4,8 @@
 
 ## Package facts
 
-- Raw data: the processing script reads `data-raw/USAID Flood Response - Post Intervention Survey.csv`, which is not in the repo.
-- Processing script: `data-raw/data_processing.R`. It writes `data/postfloodintervention.rda` and the CSV and XLSX exports in `inst/extdata/`. `data-raw/postfloodintervention.R` is only the `usethis` stub.
+- Raw data: `data-raw/USAID Flood Response - Post Intervention Survey.csv`, tracked in `data-raw/` since 2026-09-30. `data-raw/data_processing.R` reads it with `here::here("data-raw", "USAID Flood Response - Post Intervention Survey.csv")`.
+- Processing script: `data-raw/data_processing.R`. It writes `data/postfloodintervention.rda` and the CSV and XLSX exports in `inst/extdata/`.
 - Data dictionary: `data-raw/dictionary.csv`.
 - Branches: work and review PRs go to `dev`; `main` holds released versions.
 
