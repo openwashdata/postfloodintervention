@@ -6,13 +6,14 @@ District, Malawi, from the USAID Flood Response program (2019-2020).
 
 ## Package facts
 
-- Raw data: the processing script reads
-  `data-raw/USAID Flood Response - Post Intervention Survey.csv`, which
-  is not in the repo.
+- Raw data:
+  `data-raw/USAID Flood Response - Post Intervention Survey.csv`,
+  tracked in `data-raw/` since 2026-09-30. `data-raw/data_processing.R`
+  reads it with
+  `here::here("data-raw", "USAID Flood Response - Post Intervention Survey.csv")`.
 - Processing script: `data-raw/data_processing.R`. It writes
   `data/postfloodintervention.rda` and the CSV and XLSX exports in
-  `inst/extdata/`. `data-raw/postfloodintervention.R` is only the
-  `usethis` stub.
+  `inst/extdata/`.
 - Data dictionary: `data-raw/dictionary.csv`.
 - Branches: work and review PRs go to `dev`; `main` holds released
   versions.

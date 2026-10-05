@@ -246,8 +246,8 @@
 <p><code>postfloodintervention</code> is an openwashdata R data package with post-intervention monitoring data for rural water points in Mulanje District, Malawi, from the USAID Flood Response program (2019-2020).</p>
 <div class="section level2">
 <h2 id="package-facts">Package facts<a class="anchor" aria-label="anchor" href="#package-facts"></a></h2>
-<ul><li>Raw data: the processing script reads <code>data-raw/USAID Flood Response - Post Intervention Survey.csv</code>, which is not in the repo.</li>
-<li>Processing script: <code>data-raw/data_processing.R</code>. It writes <code>data/postfloodintervention.rda</code> and the CSV and XLSX exports in <code>inst/extdata/</code>. <code>data-raw/postfloodintervention.R</code> is only the <code>usethis</code> stub.</li>
+<ul><li>Raw data: <code>data-raw/USAID Flood Response - Post Intervention Survey.csv</code>, tracked in <code>data-raw/</code> since 2026-09-30. <code>data-raw/data_processing.R</code> reads it with <code>here::here("data-raw", "USAID Flood Response - Post Intervention Survey.csv")</code>.</li>
+<li>Processing script: <code>data-raw/data_processing.R</code>. It writes <code>data/postfloodintervention.rda</code> and the CSV and XLSX exports in <code>inst/extdata/</code>.</li>
 <li>Data dictionary: <code>data-raw/dictionary.csv</code>.</li>
 <li>Branches: work and review PRs go to <code>dev</code>; <code>main</code> holds released versions.</li>
 </ul></div>
