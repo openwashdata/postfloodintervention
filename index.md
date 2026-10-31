@@ -3,6 +3,8 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15837460.svg)](https://zenodo.org/doi/10.5281/zenodo.15837460)
 [![R-CMD-check](https://github.com/openwashdata/postfloodintervention/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/postfloodintervention/actions/workflows/R-CMD-check.yaml)
 
+A data package published by [openwashdata](https://openwashdata.org).
+
 This dataset contains detailed post-intervention monitoring data for
 rural water points in the Mulanje district of Malawi, collected as part
 of the USAID Flood Response program during 2019 and 2020. Using the

@@ -10,7 +10,7 @@
   "url": "https://github.com/openwashdata/postfloodintervention",
   "sameAs": "https://doi.org/10.5281/zenodo.15837460",
   "identifier": "10.5281/zenodo.15837460",
-  "datePublished": "2025-07-08",
+  "datePublished": "2026-09-30",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "isAccessibleForFree": true,
   "keywords": ["open data", "washdata", "water points", "water quality", "boreholes", "rehabilitation", "flood response", "E. coli", "Malawi"],
@@ -34,7 +34,12 @@
   "publisher": {
     "@type": "Organization",
     "name": "openwashdata",
-    "url": "https://github.com/openwashdata"
+    "url": "https://openwashdata.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "openwashdata",
+    "url": "https://openwashdata.org/pages/gallery/data/"
   },
   "spatialCoverage": {
     "@type": "Place",
@@ -44,27 +49,22 @@
   "variableMeasured": [
     {
       "@type": "PropertyValue",
-      "name": "submitted_on",
-      "description": "Date when the survey was submitted"
+      "name": "date_of_sample",
+      "description": "Date when the water sample was collected"
     },
     {
       "@type": "PropertyValue",
-      "name": "water_point_name",
-      "description": "Name of the water point"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "latitude",
+      "name": "waterpoint_id",
       "description": "Geographic latitude coordinate of the water point"
     },
     {
       "@type": "PropertyValue",
-      "name": "longitude",
+      "name": "latitude",
       "description": "Geographic longitude coordinate of the water point"
     },
     {
       "@type": "PropertyValue",
-      "name": "photo_condition_water_point",
+      "name": "longitude",
       "description": "File names or URLs of photos illustrating the current condition of the water point"
     },
     {
@@ -169,11 +169,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "date_of_sample",
-      "description": "Date when the water sample was collected"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ecoli_mpn_per_100ml",
       "description": "Most probable number (MPN) of E. coli bacteria per 100 milliliters"
     },
@@ -228,6 +223,7 @@
 <li class="active nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json"></form></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://openwashdata.org" aria-label="openwashdata website">openwashdata.org</a></li>
 <li class="nav-item"><a class="external-link nav-link" href="https://github.com/openwashdata/postfloodintervention/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul></div>
 
@@ -264,11 +260,11 @@
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Crafted by Emmanuel Mhango.</p>
+  <p>Crafted by Emmanuel Mhango. Published by <a href="https://openwashdata.org" class="external-link">openwashdata</a>, a project of <a href="https://ghe.ethz.ch/" class="external-link">Global Health Engineering</a> at ETH Zurich.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.1.</p>
+  <p>Package built with <a href="https://openwashdata.github.io/washr/" class="external-link">washr</a> 1.2.1. Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.1.</p>
 </div>
 
     </footer></div>

@@ -24,7 +24,7 @@
   "url": "https://github.com/openwashdata/postfloodintervention",
   "sameAs": "https://doi.org/10.5281/zenodo.15837460",
   "identifier": "10.5281/zenodo.15837460",
-  "datePublished": "2025-07-08",
+  "datePublished": "2026-09-30",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "isAccessibleForFree": true,
   "keywords": ["open data", "washdata", "water points", "water quality", "boreholes", "rehabilitation", "flood response", "E. coli", "Malawi"],
@@ -48,7 +48,12 @@
   "publisher": {
     "@type": "Organization",
     "name": "openwashdata",
-    "url": "https://github.com/openwashdata"
+    "url": "https://openwashdata.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "openwashdata",
+    "url": "https://openwashdata.org/pages/gallery/data/"
   },
   "spatialCoverage": {
     "@type": "Place",
@@ -58,27 +63,22 @@
   "variableMeasured": [
     {
       "@type": "PropertyValue",
-      "name": "submitted_on",
-      "description": "Date when the survey was submitted"
+      "name": "date_of_sample",
+      "description": "Date when the water sample was collected"
     },
     {
       "@type": "PropertyValue",
-      "name": "water_point_name",
-      "description": "Name of the water point"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "latitude",
+      "name": "waterpoint_id",
       "description": "Geographic latitude coordinate of the water point"
     },
     {
       "@type": "PropertyValue",
-      "name": "longitude",
+      "name": "latitude",
       "description": "Geographic longitude coordinate of the water point"
     },
     {
       "@type": "PropertyValue",
-      "name": "photo_condition_water_point",
+      "name": "longitude",
       "description": "File names or URLs of photos illustrating the current condition of the water point"
     },
     {
@@ -183,11 +183,6 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "date_of_sample",
-      "description": "Date when the water sample was collected"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "ecoli_mpn_per_100ml",
       "description": "Most probable number (MPN) of E. coli bacteria per 100 milliliters"
     },
@@ -248,6 +243,7 @@
 <li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="search.json">
 </form></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://openwashdata.org" aria-label="openwashdata website">openwashdata.org</a></li>
 <li class="nav-item"><a class="external-link nav-link" href="https://github.com/openwashdata/postfloodintervention/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul>
 </div>
@@ -262,6 +258,7 @@
 <!-- badges: start -->
 
 <p><a href="https://zenodo.org/doi/10.5281/zenodo.15837460" class="external-link"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.15837460.svg" alt="DOI"></a> <a href="https://github.com/openwashdata/postfloodintervention/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/openwashdata/postfloodintervention/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a> <!-- badges: end --></p>
+<p>A data package published by <a href="https://openwashdata.org" class="external-link">openwashdata</a>.</p>
 <p>This dataset contains detailed post-intervention monitoring data for rural water points in the Mulanje district of Malawi, collected as part of the USAID Flood Response program during 2019 and 2020. Using the mWater mobile data collection platform, enumerators conducted on-site assessments of water point conditions following flood recovery efforts.</p>
 <p>The data captures a comprehensive range of water point characteristics, including physical condition through photographs, operational performance of pumps, and hydraulic measurements such as time and effort required to pump a standard volume of water. Additionally, water quality parameters were rigorously tested—covering chemical contaminants like arsenic, ammonia, fluoride, nitrate, free chlorine, and total dissolved solids, as well as physical indicators such as pH, temperature, and turbidity.</p>
 <p>Microbiological quality was assessed via E. coli concentrations, including counts per 100 milliliters, confidence intervals, and risk classifications, supported by photographic documentation of test results. These indicators provide critical insight into the safety and usability of water sources after flood-related disruptions.</p>
@@ -1149,16 +1146,23 @@ File name or URL of image showing E. coli test result or sample compartment colo
 </ul>
 </div>
 
+<div class="openwashdata">
+<h2 data-toc-skip>openwashdata</h2>
+<ul class="list-unstyled">
+<li><p>This package is part of <a href="https://openwashdata.org" class="external-link">openwashdata</a>. Browse the <a href="https://openwashdata.org/pages/gallery/data/" class="external-link">data catalogue</a> or get the <a href="https://openwashdata.org/pages/newsletter/" class="external-link">newsletter</a>.</p></li>
+</ul>
+</div>
+
   </aside>
 </div>
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Crafted by Emmanuel Mhango.</p>
+  <p>Crafted by Emmanuel Mhango. Published by <a href="https://openwashdata.org" class="external-link">openwashdata</a>, a project of <a href="https://ghe.ethz.ch/" class="external-link">Global Health Engineering</a> at ETH Zurich.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.1.</p>
+  <p>Package built with <a href="https://openwashdata.github.io/washr/" class="external-link">washr</a> 1.2.1. Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.1.</p>
 </div>
 
     </footer>
