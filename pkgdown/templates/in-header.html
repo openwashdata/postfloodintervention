@@ -11,7 +11,7 @@
   "url": "https://github.com/openwashdata/postfloodintervention",
   "sameAs": "https://doi.org/10.5281/zenodo.15837460",
   "identifier": "10.5281/zenodo.15837460",
-  "datePublished": "2025-07-08",
+  "datePublished": "2026-09-30",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "isAccessibleForFree": true,
   "keywords": ["open data", "washdata", "water points", "water quality", "boreholes", "rehabilitation", "flood response", "E. coli", "Malawi"],
@@ -35,7 +35,12 @@
   "publisher": {
     "@type": "Organization",
     "name": "openwashdata",
-    "url": "https://github.com/openwashdata"
+    "url": "https://openwashdata.org"
+  },
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "openwashdata",
+    "url": "https://openwashdata.org/pages/gallery/data/"
   },
   "spatialCoverage": {
     "@type": "Place",
@@ -45,27 +50,22 @@
   "variableMeasured": [
     {
       "@type": "PropertyValue",
-      "name": "submitted_on",
-      "description": "Date when the survey was submitted"
+      "name": "date_of_sample",
+      "description": "Date when the water sample was collected"
     },
     {
       "@type": "PropertyValue",
-      "name": "water_point_name",
-      "description": "Name of the water point"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "latitude",
+      "name": "waterpoint_id",
       "description": "Geographic latitude coordinate of the water point"
     },
     {
       "@type": "PropertyValue",
-      "name": "longitude",
+      "name": "latitude",
       "description": "Geographic longitude coordinate of the water point"
     },
     {
       "@type": "PropertyValue",
-      "name": "photo_condition_water_point",
+      "name": "longitude",
       "description": "File names or URLs of photos illustrating the current condition of the water point"
     },
     {
@@ -167,11 +167,6 @@
       "@type": "PropertyValue",
       "name": "type_of_sample",
       "description": "Type or source of the water sample (e.g., well, tap, river)"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "date_of_sample",
-      "description": "Date when the water sample was collected"
     },
     {
       "@type": "PropertyValue",
