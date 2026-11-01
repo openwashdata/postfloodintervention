@@ -11,3 +11,5 @@
 ^\.github$
 ^LICENSE\.md$
 ^data/metadata$
+^_brand\.yml$
+^logos$
